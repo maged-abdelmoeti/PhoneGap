@@ -1,0 +1,422 @@
+
+<html>
+<head>
+<title>mobilescreen1</title>
+<script type="text/javascript" src="files/resources/lib/jquery/jquery-1.6.4.js"></script>
+<script type="text/javascript" src="files/resources/lib/jquery/plugins/jquery.mousewheel.js"></script>
+<script type="text/javascript" src="files/resources/lib/detectmobilebrowser.js"></script>
+<script type="text/javascript">
+	if(is_mobile_browser()) {
+  		var h = top.location.hash;
+		var s = top.location.search;
+		top.location.replace('mobilescreen1.html' + h + s);	
+	}	
+	$(document).ready(function(){
+	    document.getElementById('viewport').src += top.location.hash + top.location.search;											
+		if ($.browser.msie) {
+			$("#landscape_middle_middle").css("border-left","");
+			$("#landscape_middle_middle").css("left","-2px");		
+			$("#landscape_left_top").css("background-position","center 200%");
+			$("#landscape_left_bottom").css("background-position","center 0%");
+			$("#landscape_right_top").css("background-position","center 200%");
+			$("#landscape_right_bottom").css("background-position","center 0%");
+			$("#landscape_middle_top_full").css("background-position","center 100%");
+			$("#landscape_middle_bottom_full").css("background-position","center -50%");
+		}
+	});
+</script>
+
+
+	
+
+<style>
+
+.portrait, .portrait .ui-page{
+	min-height: 320px !important;
+}
+
+#viewport {
+  overflow: hidden;
+  height: 480px;
+  width: 320px;
+}
+
+#portrait_main {
+  height:              569px;
+  width:               350px;
+  border:              0;
+  margin:              20px auto 0;
+}
+
+#portrait_top {
+  height:              14px;
+  width:               350px;
+}
+
+* html #portrait_top {
+  height:              14px;
+  width:               350px;
+  position: relative;
+  top: 5px;
+}
+
+
+#portrait_top_filler {
+  height:              14px;
+  width:               320px;
+  float:               left;
+  background-image:    url(files/resources/lib/img/p_ts.png);
+  background-repeat:   repeat-x;
+}
+
+#portrait_top_left {
+  height:              14px;
+  width:               15px;
+  float:               left;
+  background-image:    url(files/resources/lib/img/p_tl.png);
+  background-repeat:   no-repeat;
+  /*background-position: center;*/
+}
+
+#portrait_top_right {
+  height:              14px;
+  width:               15px;
+  float:               left;
+  background-image:    url(files/resources/lib/img/p_tr.png);
+  background-repeat:   no-repeat;
+  /*background-position: center;*/
+}
+
+#portrait_middle {
+  height:              484px;
+  width:               350px;
+}
+
+#portrait_middle_left {
+  width:               11px;
+  height:              484px;
+  float:               left;
+}
+
+#portrait_middle_left_reduced {
+  width:               11px;
+  height:              484px;
+  background-image:    url(files/resources/lib/img/p_mbl.png);
+  -moz-background-size:     100% 100%;
+  background-size:     100% 100%;
+  background-repeat:   repeat-y;
+  background-position: center;
+}
+
+#portrait_middle_middle {
+  height:              480px;
+  width:               320px;
+  float:               left;
+  position:  		   relative;
+  top:				   -4px;
+  background-color:    transparent;
+  border:     		   4px solid #737373;
+  border-bottom: 	   none;
+  border-radius:       4px 4px 0px 0px;
+  -moz-border-radius:  4px 4px 0px 0px;
+  -webkit-border-radius: 4px 4px 0px 0px;
+  -khtml-border-radius: 4px 4px 0px 0px;
+}
+
+#portrait_middle_right {
+  width:               11px;
+  height:              484px;
+  float:               left;
+}
+
+#portrait_middle_right_reduced {
+  width:               11px;
+  height:              484px;
+  background-image:    url(files/resources/lib/img/p_mbl.png);
+  -moz-background-size:     100% 100%;
+  background-size:     100% 100%;
+  background-repeat:   repeat-y;
+  background-position: center;
+}
+
+#portrait_middle_right_full_main {
+  width:               19px;
+  height:              480px;
+  background-image:    url(files/resources/lib/img/p_rt.png);
+  background-repeat:   no-repeat;
+  background-position: center;
+}
+
+#portrait_middle_right_full_ext {
+  width:               19px;
+  height:              0px;
+  background-image:    url(files/resources/lib/img/p_mr.gif);
+  background-repeat:   repeat-y;
+}
+
+#portrait_bottom {
+  width:               350px;
+  height:              74px;
+  position:			   relative;
+  top:				   -8px;
+}
+
+#portrait_bottom_left {
+  width:               15px;
+  height:              74px;
+  float:               left;
+  background-image:    url(files/resources/lib/img/p_bl.png);
+  background-repeat:   no-repeat;
+  background-position: center;
+}
+
+#portrait_bottom_middle_reduced {
+  width:               312px;
+  height:              74px;
+  float:               left;
+  background-image:    url(files/resources/lib/img/p_bs.png);
+  background-repeat:   repeat-x;
+}
+
+#portrait_bottom_middle_full_filler {
+  width:               320px;
+  height:              74px;
+  float:               left;
+  background-image:    url(files/resources/lib/img/p_bs.png);
+  background-repeat:   repeat-x;
+}
+
+#portrait_bottom_middle_full_icons {
+  width:               250px;
+  height:              51px;
+  float:               left;
+  -moz-background-size:     100% 100%;
+  background-size:     100% 100%;
+  background-image:    url(files/resources/lib/img/p_icons.png);
+  background-repeat:   no-repeat;
+  position:			   relative;
+  top:				   -61px;
+  left:				   46px;
+  
+}
+
+#portrait_bottom_right {
+  width:               15px;
+  height:              74px;
+  float:               left;
+  background-image:    url(files/resources/lib/img/p_br.png);
+  background-repeat:   no-repeat;
+  background-position: center;
+}
+
+#landscape_main {
+  width:               408px;
+  height:              510px;
+  border:              0;
+  margin:              20px auto 0;
+}
+
+#landscape_left {
+  width:               14px;
+  height:              510px;
+  float:               left;
+}
+
+#landscape_left_filler {
+  width:               11px;
+  height:              480px;
+  background-image:    url(files/resources/lib/img/l_lm.png);
+  background-repeat:   repeat-y;
+}
+
+#landscape_left_top {
+  width:               14px;
+  height:              15px;
+  background-image:    url(files/resources/lib/img/l_lt.png);
+  background-repeat:   no-repeat;
+  background-position: center;
+}
+
+#landscape_left_bottom {
+  width:               14px;
+  height:              15px;
+  background-image:    url(files/resources/lib/img/l_lb.png);
+  background-repeat:   no-repeat;
+  background-position: center;
+}
+
+#landscape_right {
+  width:               74px;
+  height:              510px;
+  float:               left;
+  position:  		   relative;
+  left: 			   -3px;
+}
+
+#landscape_right_top {
+  width:               74px;
+  height:              15px;
+  background-image:    url(files/resources/lib/img/l_rt.png);
+  background-repeat:   no-repeat;
+  background-position: center;
+}
+
+
+#landscape_right_middle_full_filler {
+  width:               74px;
+  height:              480px;
+  background-image:    url(files/resources/lib/img/l_rs.png);
+  background-repeat:   repeat-y;
+}
+
+#landscape_right_middle_full_icons {
+  width:               51px;
+  height:              250px;
+  -moz-background-size:     100% 100%;
+  background-size:     100% 100%;
+  background-image:    url(files/resources/lib/img/l_icons.png);
+  background-repeat:   no-repeat;
+  position: 		   relative;
+  top:				   -376px;
+  left: 			   13px;
+}
+
+#landscape_right_bottom {
+  width:               74px;
+  height:              15px;
+  background-image:    url(files/resources/lib/img/l_rb.png);
+  background-repeat:   no-repeat;
+  background-position: center;
+}
+
+#landscape_middle {
+  width:               320px;
+  height:              502px;
+  float:               left;
+}
+
+#landscape_middle_top {
+  width:               320px;
+  height:              11px;
+}
+
+#landscape_middle_top_full {
+  width:               320px;
+  height:              11px;
+  float:               left;
+  background-image:    url(files/resources/lib/img/l_b.png);
+ -moz-background-size:     100% 100%;
+  background-size:     100% 100%;
+  background-repeat:   repeat-x;
+  background-position: center;
+}
+
+#landscape_middle_middle {
+  height:              480px;
+  width:               320px;
+  background-color:    transparent;
+  position: 		   relative;
+  left: 			   -4px;
+  border:     		   4px solid #737373;
+  border-right: 	   none;
+  border-radius:       4px 0px 0px 4px;
+  -moz-border-radius:  4px 0px 0px 4px;
+  -webkit-border-radius: 4px 0px 0px 4px;
+  -khtml-border-radius: 4px 0px 0px 4px;
+}
+
+
+#landscape_middle_bottom {
+  width:               320px;
+  height:              11px;
+}
+
+
+#landscape_middle_bottom_full{
+  width:               320px;
+  height:              11px;
+  float:               left;
+  background-image:    url(files/resources/lib/img/l_b.png);
+  -moz-background-size:     100% 100%;
+  background-size:     100% 100%;
+  background-repeat:   repeat-x;
+  background-position: center;
+}
+
+#share-buttons-panel {
+	width: 100%;
+	height: 32px;
+	position: relative;
+}
+#share-buttons {
+	position: absolute;
+	right: 5px;
+	top: 5px;
+	width: 105px;
+}
+</style>
+</head>
+
+<body>
+
+
+
+
+	<script>
+	    var is_rendered = true;
+	    
+	    function refresh_iframe_parameters() {
+	
+		    // quick access to "iframe_viewport"
+	    	if (!("iv" in top)) {
+	    		top.iv = top.iframe_viewport || top.frames[0];
+	    	}  
+	
+			if (top.iv.location && top.iv.location.host != top.location.host) return;
+	
+			// correct outer links	
+			$('a:not([href^=#])').each(function(){	
+				$(this).click(function() {
+					top.location.href = $(this).attr("href");
+				});
+			});
+	
+	    	// bind scrolling
+	    	$(top.iv).bind('mousewheel', function(event, delta) {$(this).scrollTop(delta * -40 + $(this).scrollTop());return false;});
+	    	
+	    	if(!is_rendered) {
+	    	   top.location.href = document.getElementById('viewport').contentDocument.location.href;
+	    	}
+	    	is_rendered = false;
+			
+	    }
+	</script>
+
+		<div id="portrait_main">
+			<div id="portrait_top">
+				<div id="portrait_top_left"></div>
+				<div id="portrait_top_filler"></div>
+				<div id="portrait_top_right"></div>
+			</div>
+			<div id="portrait_middle">
+				<div id="portrait_middle_left">
+					<div id="portrait_middle_left_reduced"></div>
+				</div>
+				<div id="portrait_middle_middle">
+					<iframe id="viewport" src="mobilescreen1.html" width="320" height="480" name="iframe_viewport" frameborder=0 scrolling="auto" onload="refresh_iframe_parameters()">
+						<p>Your browser does not support iframes.</p>
+					</iframe>
+				</div>
+				<div id="portrait_middle_right">
+					<div id="portrait_middle_right_reduced"></div>
+				</div>
+			</div>
+			<div id="portrait_bottom">
+				<div id="portrait_bottom_left"></div>
+				<div id="portrait_bottom_middle_full_filler"></div>
+				<div id="portrait_bottom_right"></div>
+					<div id="portrait_bottom_middle_full_icons"></div>
+			</div>
+		</div>
+</body>
+</html>
