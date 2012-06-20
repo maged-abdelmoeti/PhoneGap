@@ -2,7 +2,7 @@
   <name>MyTables</name>
   <theme>1</theme>
   <swatch>a</swatch>
-  <start-screen>32134815-53E7-12FD-CB5E-F2B90429FE01</start-screen>
+  <start-screen>094E0A23-8A0A-0AFA-AA5C-FFBD48BAC0BE</start-screen>
   <description>Mobile app built with Tiggzi Mobile App Builder</description>
   <screen-resolution>
     <custom>false</custom>
@@ -24,6 +24,7 @@
         <version>1.1</version>
       </resource>
     </built-in>
+    <user/>
   </resources>
   <module>
     <apk>
@@ -38,5 +39,14 @@
         <application icon="0" name="MyTables" label="MyTables"/>
       </manifest>
     </apk>
+    <ipa>
+      <profile assetId="0"/>
+      <settings>
+        <application icon="0" name="MyTables"/>
+      </settings>
+      <certificate assetId="0">
+        <password></password>
+      </certificate>
+    </ipa>
   </module>
 </projectDescriptor>
